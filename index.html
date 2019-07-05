@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>US Nuclear Power Plants</title>
+  <style>
+
+  </style>
+
+  <script src="d3/d3.js"></script>
+
+  <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+
+  <script src="d3-queue/d3-queue.min.js" type="text/javascript"></script>
+  <script src="d3-geo/d3-geo.min.js" type="text/javascript"></script>
+
+  <script src="topojson/topojson.min.js" type="text/javascript"></script>
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="map-container">
+      <div class="map-filter">Map Filter:
+        <input type="checkbox" name="filter1" id="Operating" checked="checked"><img class="filter_img"
+          src="img/operating.png" /> Operating
+        <input type="checkbox" name="filter2" id="Construction" checked="checked"><img class="filter_img"
+          src="img/construction.png" /> Construction
+        <input type="checkbox" name="filter3" id="Decommissioned" checked="checked"><img class="filter_img"
+          src="img/decommissioned.png" /> Decommissioned
+        <input type="checkbox" name="filter4" id="Research" checked="checked"><img class="filter_img"
+          src="img/research.png" /> Research
+        <input type="checkbox" name="filter5" id="Fuel Facility" , checked="checked"><img class="filter_img"
+          src="img/fuel_facility.png" /> Fuel Facility
+
+      </div>
+      <div class="us-map"></div>
+    </div>
+    <div class="side-container">
+      <button id="side_drag_button"></button>
+      <iframe title="Site Pages" id="side_panel" src="" frameBorder="0">Side Panel</iframe>
+    </div>
+  </div>
+  <!-- container -->
+
+</body>
+<script src="nuclear.js" type="text/javascript"></script>
+
+</html>

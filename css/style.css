@@ -1,0 +1,168 @@
+* {
+  border-spacing: border-box;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* overflow: hidden; */
+}
+
+.map-container {
+  fill: none;
+  width: 75vw;
+  height: 100vh;
+  /* pointer-events: none; */
+}
+
+.map-filter {
+  background: pink;
+  width: 100%;
+  height: 5%;
+}
+
+.filter_img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.us-map {
+  background: lightcyan;
+  padding: 1em 10em 1em 1em;
+  width: 100%;
+  height: 95%;
+}
+
+/* .map-figures {
+  background: lightslategray;
+  width: 100%;
+  height: 10%;
+} */
+
+.side-container {
+  position: absolute;
+  background: grey;
+  width: 25vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  transition: width 500ms;
+}
+
+.side-container.expanded {
+  width: 70vw;
+}
+
+#side_drag_button {
+  position: absolute;
+  top: 50%;
+  left: -0.5em;
+  transform: translateY(-50%);
+  height: 4em;
+  width: 1.5em;
+  color: black;
+  border-color: black;
+  border-radius: 10%;
+  /* cursor: move; */
+  z-index: 1;
+}
+
+#side_panel {
+  object-fit: scale-down;
+  width: 99.25%;
+  height: 99.25%;
+  margin: 0;
+  padding: 0;
+  transition: opacity 500ms 500ms;
+
+  /* transform: scale(.99); */
+}
+
+#side_panel.expanded {
+  opacity: 1;
+}
+
+/* .side {
+  background: lightgrey;
+  width: 100%;
+  height: 100%;
+} */
+
+/* .feature {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+.feature.hover {
+  fill: blue;
+} */
+
+/* .feature.active {
+  fill: orange;
+} */
+
+.region_group_txt {
+  user-select: none;
+  pointer-events: none;
+}
+
+.state {
+  cursor: pointer;
+}
+
+.state.region1,
+#region1_label.region_label {
+  fill: lightsteelblue;
+}
+
+.state.region2,
+#region2_label.region_label {
+  fill: lightcoral;
+}
+
+.state.region3,
+#region3_label.region_label {
+  fill: lightgray;
+}
+
+.state.region4,
+#region4_label.region_label {
+  fill: lightgreen;
+}
+
+.state.hq {
+  fill: brown;
+}
+
+.state_text_group>text {
+  user-select: none;
+}
+
+.mesh {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.region_label {
+  /* fill: #777; */
+  fill-opacity: .75;
+  font-size: 20px;
+  font-weight: 900;
+  text-anchor: start;
+  text-shadow: 0 0 0 black;
+  pointer-events: none;
+  user-select: none;
+}
