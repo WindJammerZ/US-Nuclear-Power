@@ -75,8 +75,8 @@ const region1_ids = ["09", "10", "23", "24", "25", "33", "34", "36", "42", "44",
   hq_ids = ["11"];
 
 d3.queue()
-  .defer(d3.json, "us.json")
-  .defer(d3.json, "id_to_state.json")
+  .defer(d3.json, "json/us.json")
+  .defer(d3.json, "json/id_to_state.json")
   .defer(d3.csv, "data/operating_reactors.csv")
   .defer(d3.csv, "data/construction_reactors.csv")
   .defer(d3.csv, "data/fuel_facilities.csv")
